@@ -5,7 +5,6 @@ WORKDIR /opt/tomcat
 RUN yum -y install java
 RUN wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.73.tar.gz
 RUN tar xvfz apache*.tar.gz
-#RUN mv apache-tomcat-8.5.40/* /opt/tomcat/
 RUN mv apache-tomcat-8.5.73/* /opt/tomcat/
 WORKDIR /opt/tomcat/webapps
 COPY server.keystore /opt/tomcat/conf/server.keystore
