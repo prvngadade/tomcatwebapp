@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  tomcat-server:
+    build:
+      context: .
+      dockerfile: Dockerfile_pravin 
+    privileged: true
+    user: root
+    ports:
+      - 8080:8080
+      - 8443:8443
+    container_name: tomcat-server
+    volumes:
+      - ./logs:/opt/tomcat/logs:rw

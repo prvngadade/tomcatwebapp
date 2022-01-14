@@ -1,0 +1,14 @@
+job("test_poll_scm") {
+	description()
+	keepDependencies(false)
+	disabled(false)
+	triggers {
+		scm("H/15 * * * *") {
+			ignorePostCommitHooks(false)
+		}
+	}
+	concurrentBuild(false)
+	steps {
+		shell("docker build -t tomcattestapp:1.0 .")
+	}
+}
