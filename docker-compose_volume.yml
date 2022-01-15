@@ -3,7 +3,7 @@ services:
   tomcat-server:
     build:
       context: .
-      dockerfile: Dockerfile_pravin 
+      dockerfile: Dockerfile 
     privileged: true
     user: root
     ports:
