@@ -10,7 +10,7 @@ WORKDIR /opt/tomcat/webapps
 #COPY /opt/server.xml /opt/tomcat/conf/server.xml
 RUN wget https://tomcat.apache.org/tomcat-8.5-doc/appdev/sample/sample.war
 WORKDIR /opt/tomcat/conf/
-RUN 
+RUN wget https://github.com/prvngadade/tomcatwebapp/blob/main/server.xml
 WORKDIR /opt
 RUN wget https://github.com/prvngadade/tomcatwebapp/blob/main/tomcat.jks
 EXPOSE 8080
